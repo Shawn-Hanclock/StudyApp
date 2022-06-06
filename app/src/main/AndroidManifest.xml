@@ -17,9 +17,6 @@
             android:name=".StudyActivity"
             android:exported="false" />
         <activity
-            android:name=".TranslDefnActivity"
-            android:exported="false" />
-        <activity
             android:name=".AddRemActivity"
             android:exported="false" />
         <activity
