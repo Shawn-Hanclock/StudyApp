@@ -24,6 +24,12 @@
             android:text="Vocabulary Study App"
             android:textSize="34sp" />
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="237dp"
+            app:srcCompat="@drawable/books" />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="30dp" />

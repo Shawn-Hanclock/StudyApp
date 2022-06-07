@@ -15,29 +15,29 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-//import com.example.studyapp.databinding.ActivityAboutBinding;
-
-public class AboutActivity extends AppCompatActivity {
-
+public class AboutActivity extends AppCompatActivity
+{
     private AppBarConfiguration appBarConfiguration;
-   // private ActivityAboutBinding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
         aboutToMain();
-    }
+    }//end of oncreate
 
     private void aboutToMain()
     {
         Button toMain = (Button) findViewById(R.id.aboutMainButton);
-        toMain.setOnClickListener(new View.OnClickListener() {
+        toMain.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 startActivity(new Intent(AboutActivity.this, MainActivity.class));
             }
-        });
-    }
-}
+        });//end on click
+    }//end of about to main
+}//end of about activity class

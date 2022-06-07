@@ -31,7 +31,7 @@
             android:id="@+id/instructionsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Quizlet but better." />
 
         <Space
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
             android:id="@+id/aboutinfoTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="To study follow the steps." />
 
     </LinearLayout>
 
