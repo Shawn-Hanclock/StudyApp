@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
         android:layout_marginTop="122dp"
         android:orientation="vertical">
 
@@ -21,6 +20,7 @@
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
+            android:gravity="center"
             android:text="Vocabulary Study App"
             android:textSize="34sp" />
 
@@ -33,14 +33,19 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
-            android:background="@color/teal_200"
+            android:background="@drawable/btn_bg"
             android:text="Word List" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <Button
             android:id="@+id/mainAboutButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
+            android:background="@drawable/btn_bg"
             android:text="About" />
 
     </LinearLayout>

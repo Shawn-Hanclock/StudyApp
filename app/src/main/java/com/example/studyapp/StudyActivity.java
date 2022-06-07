@@ -6,15 +6,49 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class StudyActivity extends AppCompatActivity {
+
+
+    Button swap;
+    Button next;
+
+    TextView flashCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_study);
-        studyToWordList();
         studyToHome();
+        swapCard();
+        nextCard();
+
+        flashCard = (TextView) findViewById(R.id.studyWordDefTextView);
+
+        Intent intent = getIntent();
+        ArrayList<String> wordStudy = intent.getStringArrayListExtra(AddRemActivity.WORD_LIST);
+        ArrayList<String> defineStudy = intent.getStringArrayListExtra(AddRemActivity.DEFINE_LIST);
+
+        //flashCard.setText(wordStudy.get(0));
+
+
+        Toast.makeText(StudyActivity.this, "" + wordStudy.isEmpty(), Toast.LENGTH_LONG).show();
+        if(!(wordStudy.isEmpty()))
+        {
+            flashCard.setText(wordStudy.get(0));
+        }
+
+        Button toWordList = (Button) findViewById(R.id.studyWordListButton);
+        toWordList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(StudyActivity.this, AddRemActivity.class));
+            }
+        });
     }
 
     private void studyToHome()
@@ -28,13 +62,24 @@ public class StudyActivity extends AppCompatActivity {
         });
     }
 
-    private void studyToWordList()
+    private void swapCard()
     {
-        Button toWordList = (Button) findViewById(R.id.studyWordListButton);
-        toWordList.setOnClickListener(new View.OnClickListener() {
+        swap = (Button) findViewById(R.id.swapButton);
+        swap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(StudyActivity.this, AddRemActivity.class));
+
+            }
+        });
+    }
+
+    private void nextCard()
+    {
+        next = (Button) findViewById(R.id.nextButton);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
